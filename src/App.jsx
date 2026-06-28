@@ -1,0 +1,150 @@
+import { Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ServiceCard from './components/ServiceCard';
+import { services } from './data/services';
+import ServicePage from './pages/ServicePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+
+function App() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      title: 'Bizimle Kendinizi Özel Hissedin',
+      subtitle: 'Cilt Bakımı İçin Doğru Adres',
+      description: 'Güzellik sektöründe yaşanan tüm gelişmeleri yakından takip eden salonumuz, teknolojiyi en doğru şekilde kullanarak müşterileriyle buluşmaktadır.'
+    },
+    {
+      title: 'Profesyonel Güzellik Hizmetleri',
+      subtitle: 'Kalite ve Güvenin Adresi',
+      description: 'Son teknoloji cihazlarımız ve uzman ekibimizle size en iyi güzellik hizmetlerini sunuyoruz.'
+    },
+    {
+      title: 'Kendinizi Şımartın',
+      subtitle: 'Lüks ve Konfor Bir Arada',
+      description: 'Hijyenik ortamımızda, uygun fiyat politikamızla kendinizi özel hissedeceğiniz deneyim yaşayın.'
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+  const HomePage = () => (
+    <>
+      <section id="home" className="pt-32">
+        <div className="relative h-96 md:h-[500px] bg-black-900 overflow-hidden">
+          {/* Hero arka plan – placeholder gradientler */}
+          <div className="absolute inset-0">
+            <div
+              className={`absolute inset-0 bg-gradient-to-br from-black-900 via-black-800 to-gold-900 transition-opacity duration-500 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'}`}
+            />
+            <div
+              className={`absolute inset-0 bg-gradient-to-br from-black-800 via-gold-950 to-black-900 transition-opacity duration-500 ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'}`}
+            />
+            <div
+              className={`absolute inset-0 bg-gradient-to-br from-gold-950 via-black-900 to-black-800 transition-opacity duration-500 ${currentSlide === 2 ? 'opacity-100' : 'opacity-0'}`}
+            />
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gold-500/80 hover:bg-gold-500 text-white rounded-full flex items-center justify-center transition z-20"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gold-500/80 hover:bg-gold-500 text-white rounded-full flex items-center justify-center transition z-20"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition ${
+                  currentSlide === index ? 'bg-gold-500' : 'bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Content */}
+          <div className="container mx-auto px-4 py-24 relative z-10 h-full flex items-center">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gold-400 transition-opacity duration-500">
+                {slides[currentSlide].title}
+              </h1>
+              <p className="text-2xl md:text-3xl mb-4 text-gold-200 font-light transition-opacity duration-500">
+                {slides[currentSlide].subtitle}
+              </p>
+              <p className="text-lg mb-8 text-gray-300 transition-opacity duration-500">
+                {slides[currentSlide].description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/iletisim"
+                  className="inline-block bg-gold-500 text-black-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-400 transition transform hover:scale-105 shadow-lg"
+                >
+                  Bize Ulaşın
+                </Link>
+                <a
+                  href="#services"
+                  className="inline-block border-2 border-gold-400 text-gold-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-400 hover:text-black-900 transition"
+                >
+                  Hizmetlerimiz
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-20 bg-black-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black-900">Hizmetlerimiz</h2>
+            <p className="text-lg text-black-600 max-w-2xl mx-auto">
+              Profesyonel ekibimizle size en iyi güzellik hizmetlerini sunuyoruz
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {services.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/hakkimizda" element={<AboutPage />} />
+        <Route path="/iletisim" element={<ContactPage />} />
+        <Route path="/hizmet/:id" element={<ServicePage />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
+
+export default App
