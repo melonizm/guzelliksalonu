@@ -2,6 +2,7 @@ export const services = [
   {
     id: 'lazer-epilasyon',
     name: 'Lazer Epilasyon',
+    image: '/images/lazerepilasyon.jpeg',
     description: 'Kalıcı ve etkili epilasyon çözümü',
     fullDescription: 'Lazer epilasyon, istenmeyen tüylerden kalıcı olarak kurtulmanın en etkili ve güvenli yöntemlerinden biridir. Son teknoloji diyot lazer cihazlarımız, tüy köklerindeki melanin pigmentini hedef alarak kökleri zayıflatır ve zamanla tüy çıkışını durdurur. Uygulama öncesinde cilt tipiniz ve kıl yapınız analiz edilir; buna göre en uygun enerji seviyesi belirlenir. Seanslar kısa sürer, günlük hayata hızlı dönüş sağlar.',
     details: 'Lazer epilasyon genellikle 6–8 seanslık bir protokolle uygulanır. Seans aralıkları vücut bölgelerine göre değişir. Yüz, koltuk altı, bacak, bikini ve sırt gibi tüm bölgelerde güvenle uygulanabilir. İşlem sonrası hafif kızarıklık normal olup kısa sürede geçer. Düzenli seanslarla pürüzsüz ve kalıcı sonuçlar elde edilir.',
@@ -10,6 +11,7 @@ export const services = [
   {
     id: 'rasping',
     name: 'Rasping',
+    image: '/images/Rasping.jpg',
     description: 'Vücut şekillendirme ve sıkılaştırma',
     fullDescription: 'Rasping, vücut kontürünü belirginleştiren ve cildi sıkılaştıran profesyonel bir vücut şekillendirme yöntemidir. Özel aparatlarla uygulanan ritmik hareketler, kan dolaşımını hızlandırır, lenf drenajını destekler ve bölgesel yağ birikimlerinin görünümünü azaltmaya yardımcı olur. Spor ve diyetle desteklendiğinde daha belirgin sonuçlar verir.',
     details: 'Rasping seansları genellikle karın, kalça, bacak ve kol gibi bölgelerde uygulanır. Her seans ortalama 30–45 dakika sürer. Düzenli uygulamayla cilt dokusu sıkılaşır, selülit görünümü azalır ve vücut hatları daha belirgin hale gelir. Seans öncesi bol su tüketimi önerilir.',
@@ -18,6 +20,7 @@ export const services = [
   {
     id: 'g5-masaji',
     name: 'G5 Masajı',
+    image: '/images/G5masaji.jpg',
     description: 'Selülit ve bölgesel incelme',
     fullDescription: 'G5 masajı, titreşimli başlıklı profesyonel bir cihazla uygulanan etkili bir selülit ve bölgesel incelme tedavisidir. Derin doku masajı etkisi yaratarak kan dolaşımını artırır, yağ hücrelerinin parçalanmasına yardımcı olur ve ciltteki portakal kabuğu görünümünü azaltır. Spor sonrası kas gevşetme amacıyla da tercih edilir.',
     details: 'G5 masajı kalça, bacak, karın ve kol bölgelerinde uygulanabilir. Seans süresi bölgeye göre 20–40 dakika arasında değişir. İlk seanslardan itibaren ciltte yumuşama hissedilir; kalıcı sonuçlar için haftada 2–3 seans önerilir. Uygulama sonrası bol su içmek toksin atılımını destekler.',
@@ -26,6 +29,7 @@ export const services = [
   {
     id: 'striort-catlak-tedavisi',
     name: 'Striort Çatlak Tedavisi',
+    image: '/images/Striortcatlaktedavisi.webp',
     description: 'Çatlakların görünümünü azaltma',
     fullDescription: 'Striort çatlak tedavisi, hamilelik, kilo değişimi veya büyüme dönemlerinde oluşan çatlakların görünümünü azaltmaya yönelik özel bir protokoldür. Cildin elastikiyetini artıran aktif bileşenler ve profesyonel uygulama teknikleri bir arada kullanılır. Hem yeni hem de eski çatlaklarda belirgin iyileşme sağlanabilir.',
     details: 'Tedavi protokolü çatlakların yaşına, derinliğine ve bulunduğu bölgeye göre kişiselleştirilir. Karın, kalça, göğüs ve bacak gibi alanlarda uygulanır. Seanslar genellikle 4–8 hafta aralıklarla planlanır. Düzenli uygulamayla çatlakların rengi açılır, derinliği azalır ve cilt dokusu düzgünleşir.',
@@ -34,6 +38,7 @@ export const services = [
   {
     id: 'cilt-bakimi',
     name: 'Cilt Bakımı',
+    image: '/images/ciltbakimi.webp',
     description: 'Profesyonel cilt bakım hizmetleri',
     fullDescription: 'Profesyonel cilt bakımı, cildinizin ihtiyaçlarına göre kişiselleştirilen kapsamlı bir bakım protokolüdür. Uygulama öncesinde cilt analizi yapılır; ardından temizleme, peeling, buhar, siyah nokta temizliği, maske ve nemlendirme adımları uygulanır. Kuru, yağlı, karma ve hassas cilt tiplerine özel ürünler kullanılır.',
     details: 'Cilt bakımı seansları ortalama 60–90 dakika sürer. Akne, leke, kırışıklık veya mat görünüm gibi farklı cilt sorunlarına yönelik özel protokoller de mevcuttur. Düzenli bakımla cilt tonu eşitlenir, gözenekler sıkılaşır ve cilt daha sağlıklı bir görünüm kazanır. Ev bakım rutininiz için ürün önerileri de sunulur.',
@@ -42,6 +47,7 @@ export const services = [
   {
     id: 'hydrfacial',
     name: 'Hydrfacial',
+    image: '/images/Hydrfacial.jfif',
     description: 'Hidrasyon ve cilt yenileme',
     fullDescription: 'Hydrfacial, vakum teknolojisi ve özel serumlarla cildi derinlemesine temizleyen, nemlendiren ve yenileyen ileri düzey bir cilt bakımıdır. Tek seansta temizleme, peeling, ekstraksiyon ve serum infüzyonu aynı anda gerçekleştirilir. İşlem sonrası cilt anında daha parlak, pürüzsüz ve canlı görünür.',
     details: 'Hydrfacial tüm cilt tiplerine uygundur ve herhangi bir iyileşme süresi gerektirmez. Özel günlerden önce, düzenli bakım olarak veya cilt yenileme amacıyla tercih edilebilir. Seans süresi yaklaşık 45–60 dakikadır. Lekeler, ince çizgiler ve mat görünüm üzerinde belirgin iyileşme sağlar.',
@@ -50,6 +56,7 @@ export const services = [
   {
     id: 'dermapen',
     name: 'Dermapen',
+    image: '/images/Dermapen.webp',
     description: 'Cilt yenileme tedavisi',
     fullDescription: 'Dermapen, mikro iğneleme teknolojisi kullanan gelişmiş bir cilt yenileme tedavisidir. Ciltte kontrollü mikro kanallar açarak vücudun doğal kolajen ve elastin üretimini tetikler. Akne izleri, lekeler, ince çizgiler, gözenek genişlemesi ve cilt tonu eşitsizliklerinde etkili sonuçlar verir.',
     details: 'Dermapen seansları ortalama 30–45 dakika sürer. Uygulama öncesi lokal anestezik krem kullanılarak konfor sağlanır. 3–6 seanslık protokollerle kalıcı iyileşme elde edilir. Seans sonrası hafif kızarıklık 1–2 gün içinde geçer. Güneş koruyucu kullanımı tedavi süresince önemlidir.',
@@ -58,6 +65,7 @@ export const services = [
   {
     id: 'plazmapen',
     name: 'Plazmapen',
+    image: '/images/Plazmapen.jpg',
     description: 'Cilt sorunlarına çözüm',
     fullDescription: 'Plazmapen, plazma enerjisi teknolojisi ile cilt yüzeyinde kontrollü mikro hasar oluşturarak cildin kendini yenilemesini sağlayan ileri düzey bir tedavidir. Göz kapağı kaldırma, kırışıklık azaltma, leke tedavisi ve cilt sıkılaştırma alanlarında etkili sonuçlar verir. Cerrahi müdahale gerektirmeden gençleşme sağlar.',
     details: 'Plazmapen uygulaması hedeflenen bölgeye göre 30–60 dakika sürer. Uygulama sonrası bölgede kabuklanma oluşabilir; bu doğal bir iyileşme sürecidir. 1–2 hafta içinde cilt yenilenir ve daha sıkı, genç bir görünüm elde edilir. Sonuçlar 1–3 yıl arasında kalıcıdır.',
@@ -66,6 +74,7 @@ export const services = [
   {
     id: 'sac-vitamini-mezoterapi',
     name: 'Saç Vitamini Mezoterapi',
+    image: '/images/SacVitaminiMezoterapi.webp',
     description: 'Saç sağlığı ve güçlendirme',
     fullDescription: 'Saç vitamini mezoterapi, saç derisine özel vitamin, mineral ve amino asit karışımlarının mikro enjeksiyon yöntemiyle uygulandığı etkili bir saç tedavisidir. Saç köklerini besler, saç dökülmesini yavaşlatır ve yeni saç çıkışını destekler. Erkek ve kadın tipi saç dökülmesinde kullanılabilir.',
     details: 'Mezoterapi seansları 20–30 dakika sürer ve genellikle 4–8 seanslık protokollerle uygulanır. Seans aralıkları 1–2 haftadır. İlk seanslardan itibaren saçta güçlenme ve dökülmede azalma gözlemlenir. Düzenli uygulamayla saç telleri kalınlaşır ve saç hacmi artar.',
@@ -74,6 +83,7 @@ export const services = [
   {
     id: 'kas-vitamini',
     name: 'Kaş Vitamini',
+    image: '/images/kasvitamini.jpg',
     description: 'Gür ve sağlıklı kaşlar için',
     fullDescription: 'Kaş vitamini uygulaması, seyrek ve zayıf kaşları güçlendirmek için kaş bölgesine özel vitamin ve peptid karışımlarının uygulandığı profesyonel bir bakımdır. Kaş köklerini uyararak daha gür, dolgun ve sağlıklı kaş çıkışını destekler. Aşırı alım veya genetik seyreklik durumlarında tercih edilir.',
     details: 'Kaş vitamini seansları 15–20 dakika sürer. Genellikle 4–6 seanslık kürler halinde uygulanır. İlk sonuçlar 3–4 hafta içinde görülmeye başlar. Düzenli bakımla kaşlar daha dolgun ve belirgin hale gelir. Microblading öncesi hazırlık olarak da kullanılabilir.',
@@ -82,6 +92,7 @@ export const services = [
   {
     id: 'ipek-kirpik',
     name: 'İpek Kirpik',
+    image: '/images/ipekKirpik.jfif',
     description: 'Gösterişli ve doğal kirpikler',
     fullDescription: 'İpek kirpik uygulaması, kendi kirpiklerinize tek tek özel ipek tellerin yapıştırıldığı popüler bir güzellik uygulamasıdır. Kirpiklerinize uzunluk, hacim ve kıvrım kazandırır; rimel kullanma ihtiyacını ortadan kaldırır. Doğal, klasik, hacimli ve mega hacimli gibi farklı stiller sunulur.',
     details: 'Uygulama süresi stile göre 1,5–3 saat arasında değişir. Doğru bakımla 3–4 hafta kalıcılık sağlar; dolgu seanslarıyla uzatılabilir. Yağ bazlı makyaj temizleyicilerden kaçınılması önerilir. Göz şeklinize ve tarzınıza uygun stil uzmanlarımız tarafından belirlenir.',
@@ -90,6 +101,7 @@ export const services = [
   {
     id: 'protez-tirnak',
     name: 'Protez Tırnak',
+    image: '/images/ProtezTirnak.jpg',
     description: 'Güzel ve sağlıklı tırnaklar',
     fullDescription: 'Protez tırnak uygulaması, kendi tırnaklarınızın üzerine veya form kullanılarak yapılan, dayanıklı ve estetik tırnak uzatma ve güçlendirme yöntemidir. Jel, akrilik veya jel-akuil hibrit tekniklerle uygulanır. Kırık, kısa veya yetersiz tırnaklarda ideal çözümdür.',
     details: 'Protez tırnak uygulaması 60–90 dakika sürer. Bakım seansları 2–3 haftada bir yapılmalıdır. İstediğiniz uzunluk, şekil ve renkte tasarlanabilir. Doğru bakımla tırnak altı sağlığı korunur ve doğal tırnaklar zarar görmez. Özel günler ve günlük kullanım için uygundur.',
@@ -98,6 +110,7 @@ export const services = [
   {
     id: 'lifting',
     name: 'Lifting',
+    image: '/images/Ciltlifting.webp',
     description: 'Genç ve diri bir görünüm',
     fullDescription: 'Cilt lifting uygulaması, yaşlanma ve yerçekimi kaynaklı sarkmaları toparlayarak daha genç ve dinamik bir görünüm kazandıran profesyonel bir tedavidir. RF, ultrason veya özel lifting protokolleri ile cildin alt katmanlarındaki kolajen liflerini uyararak sıkılaşma sağlar. Yüz, boyun ve dekolte bölgelerinde uygulanabilir.',
     details: 'Lifting seansları 30–60 dakika sürer. Cerrahi olmayan yöntemlerle hemen günlük hayata dönülebilir. 3–6 seanslık protokollerle belirgin sıkılaşma elde edilir. Sonuçlar kademeli olarak ortaya çıkar ve aylarca devam eder. Düzenli bakımla genç görünüm korunur.',
@@ -106,6 +119,7 @@ export const services = [
   {
     id: 'manikur',
     name: 'Manikür',
+    image: '/images/Manikur.webp',
     description: 'Eller için profesyonel bakım',
     fullDescription: 'Profesyonel manikür, ellerinizin ve tırnaklarınızın sağlıklı ve bakımlı görünmesini sağlayan kapsamlı bir el bakımıdır. Tırnak şekillendirme, cuticle bakımı, el peelingi, masaj ve oje uygulaması adımlarını içerir. Klasik, jel ve kalıcı oje seçenekleri mevcuttur.',
     details: 'Manikür seansı 30–60 dakika sürer. Düzenli manikür tırnak sağlığını korur, el derisini yumuşatır ve estetik görünüm sağlar. Hijyenik aletler ve kaliteli ürünler kullanılır. Özel günler için nail art ve süsleme seçenekleri de sunulmaktadır.',
@@ -114,6 +128,7 @@ export const services = [
   {
     id: 'pedikur',
     name: 'Pedikür',
+    image: '/images/Pedikur.webp',
     description: 'Ayaklar için rahatlatıcı bakım',
     fullDescription: 'Profesyonel pedikür, ayak sağlığını koruyan ve ayakları bakımlı gösteren kapsamlı bir ayak bakımıdır. Tırnak kesimi ve şekillendirme, nasır temizliği, cuticle bakımı, ayak peelingi ve rahatlatıcı masaj içerir. Yaz aylarında ve dört mevsim düzenli bakım için idealdir.',
     details: 'Pedikür seansı 45–60 dakika sürer. Medikal pedikür seçeneği ile mantar, nasır ve çatlak gibi sorunlara özel bakım da sunulur. Uygulama sonrası ayaklar yumuşar, tırnaklar düzenlenir ve ferah bir his elde edilir. Jel oje uygulaması da yapılabilir.',
@@ -122,6 +137,7 @@ export const services = [
   {
     id: 'dudak-renklendirme',
     name: 'Dudak Renklendirme',
+    image: '/images/DudakRenklendirme.jfif',
     description: 'Doğal ve kalıcı dudak rengi',
     fullDescription: 'Dudak renklendirme, dudaklara doğal ve kalıcı renk kazandıran permanent makyaj uygulamasıdır. Solgun, eşitsiz renkli veya belirsiz dudak hatlarına çözüm sunar. Yüz şeklinize ve ten renginize uygun ton seçilerek doğal ve dolgun bir dudak görünümü elde edilir.',
     details: 'Uygulama 1,5–2 saat sürer. İyileşme süreci 5–7 gündür; bu sürede renk koyu görünür, kabuklar döküldükçe gerçek ton ortaya çıkar. 1–3 yıl kalıcılık sağlar. Ruj kullanma ihtiyacını büyük ölçüde azaltır. İlk 4 hafta sonra rötuş seansı yapılabilir.',
@@ -130,6 +146,7 @@ export const services = [
   {
     id: 'microblading-kil-teknigi',
     name: 'Microblading Kıl Tekniği',
+    image: '/images/MicrobladingKilTeknigi.jfif',
     description: 'Kalıcı kaş tasarımı',
     fullDescription: 'Microblading, özel microblade kalemi ile kaş bölgesine tek tek doğal kıl efektleri çizilen kalıcı kaş makyajı tekniğidir. Seyrek kaşları doldurur, şekilsiz kaşlara form kazandırır ve günlük kaş makyajı ihtiyacını ortadan kaldırır. Altın oran prensibine göre yüzünüze en uygun kaş tasarımı yapılır.',
     details: 'Microblading uygulaması 2–3 saat sürer. İyileşme 7–10 gündür. 1–2 yıl kalıcılık sağlar; renk zamanla solar, rötuş ile yenilenir. Uygulama öncesi detaylı kaş analizi ve tasarım onayı alınır. Doğru teknikle son derece doğal sonuçlar elde edilir.',
@@ -138,6 +155,7 @@ export const services = [
   {
     id: 'kalici-eyeliner',
     name: 'Kalıcı Eyeliner',
+    image: '/images/KaliciEyeliner.jfif',
     description: 'Kalıcı göz makyajı',
     fullDescription: 'Kalıcı eyeliner, göz kapağı çizgisine uygulanan permanent makyaj ile her gün eyeliner çekme zahmetini ortadan kaldırır. İnce, orta veya kalın çizgi seçenekleriyle gözlerinizi belirginleştirir ve bakışlarınıza derinlik katar. Smoky, klasik veya doğal efektler uygulanabilir.',
     details: 'Uygulama 1–2 saat sürer. Hafif şişlik ve kızarıklık 2–3 gün içinde geçer. 1–3 yıl kalıcılık sağlar. Göz şeklinize en uygun stil uzmanlarımız tarafından belirlenir. İlk 4–6 hafta sonra rötuş seansı önerilir.',
@@ -146,6 +164,7 @@ export const services = [
   {
     id: 'altinoran-kas-alimi',
     name: 'Altınoran Kaş Alımı',
+    image: '/images/AltinoranKasAlimi.jpg',
     description: 'Profesyonel kaş şekillendirme',
     fullDescription: 'Altınoran kaş alımı, yüz oranlarınızı dikkate alarak kaşlarınıza en uygun şekli belirleyen profesyonel bir kaş tasarım tekniğidir. Simetrik, dengeli ve yüz hatlarınızı vurgulayan kaş formu oluşturulur. İplik, ağda veya cımbız ile hassas alım yapılır.',
     details: 'Kaş alımı seansı 15–20 dakika sürer. Yüz şeklinize göre kaş başlangıç noktası, kemer ve bitiş noktası altın oran ile belirlenir. Düzenli bakımla kaş formu korunur. İlk kez gelen müşterilerimize detaylı danışmanlık sunulur.',
@@ -154,6 +173,7 @@ export const services = [
   {
     id: 'gelin-basi',
     name: 'Gelin Başı',
+    image: '/images/GelinBasi.PNG',
     description: 'Özel günler için makyaj',
     fullDescription: 'Gelin başı paketimiz, düğün gününüzde kusursuz görünmeniz için profesyonel makyaj ve saç tasarımını bir arada sunar. Prova seansı ile makyaj ve saç modeliniz önceden belirlenir. Gelinlik, aksesuar ve düğün temanıza uygun bütünsel bir görünüm oluşturulur. Gün boyu kalıcı, fotoğraf dostu makyaj uygulanır.',
     details: 'Gelin başı hizmeti provalı paket olarak sunulur. Prova seansında makyaj, saç modeli ve aksesuar denemesi yapılır. Düğün günü ekibimiz belirlenen saatte gelir ve tüm süreci yönetir. Saç aksesuarları ve taç uygulaması dahildir. Misafir makyajı da ayrıca talep edilebilir.',
@@ -162,6 +182,7 @@ export const services = [
   {
     id: 'profesyonel-makyaj',
     name: 'Profesyonel Makyaj',
+    image: '/images/promakyaj.jpg',
     description: 'Her türlü makyaj hizmeti',
     fullDescription: 'Profesyonel makyaj hizmetimiz, özel günler, davetler, fotoğraf çekimleri ve günlük ihtiyaçlarınız için uzman makyaj uygulaması sunar. Ten renginize, kıyafetinize ve etkinlik türüne uygun makyaj stili belirlenir. Kaliteli ve uzun süre kalıcı ürünler kullanılır.',
     details: 'Makyaj seansı 45–90 dakika sürer. Doğal, gece, smoky, editorial ve fotoğraf makyajı gibi farklı stiller uygulanabilir. Kirpik takma, kontür ve highlight teknikleri profesyonelce uygulanır. Özel günlerinizde provasız da hizmet alabilirsiniz.',
@@ -170,6 +191,7 @@ export const services = [
   {
     id: 'tum-sac-islemleri',
     name: 'Tüm Saç İşlemleri',
+    image: '/images/sacislemleri.webp',
     description: 'Tüm saç bakım hizmetleri',
     fullDescription: 'Salonumuzda saç kesimi, boyama, röfle, ombre, balyaj, keratin bakım, botoks, saç maskesi ve şekillendirme dahil tüm saç hizmetlerini sunuyoruz. Saç tipiniz ve yüz şeklinize uygun model önerileri yapılır. Kaliteli boya ve bakım ürünleri kullanılarak saç sağlığı korunur.',
     details: 'Saç kesimi 30–45 dakika, boyama ve röfle işlemleri 2–4 saat sürebilir. Keratin ve botoks bakımları saçı düzleştirir, parlaklık kazandırır ve yıpranmayı onarır. Düzenli bakımla saçlarınız daha sağlıklı ve canlı görünür. Ücretsiz saç analizi yapılır.',
