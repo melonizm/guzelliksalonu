@@ -39,18 +39,21 @@ function App() {
     <>
       <section id="home" className="pt-32">
         <div className="relative h-96 md:h-[500px] bg-black-900 overflow-hidden">
-          {/* Hero arka plan – placeholder gradientler */}
+          {/* Hero arka plan – işletme fotoğrafları */}
           <div className="absolute inset-0">
             <div
-              className={`absolute inset-0 bg-gradient-to-br from-black-900 via-black-800 to-gold-900 transition-opacity duration-500 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'}`}
+              style={{ backgroundImage: "url('/images/isletmefoto1.webp')" }}
             />
             <div
-              className={`absolute inset-0 bg-gradient-to-br from-black-800 via-gold-950 to-black-900 transition-opacity duration-500 ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'}`}
+              style={{ backgroundImage: "url('/images/isletmefoto2.jpg')" }}
             />
             <div
-              className={`absolute inset-0 bg-gradient-to-br from-gold-950 via-black-900 to-black-800 transition-opacity duration-500 ${currentSlide === 2 ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${currentSlide === 2 ? 'opacity-100' : 'opacity-0'}`}
+              style={{ backgroundImage: "url('/images/isletmefoto3.jpg')" }}
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/60" /> {/* Metinlerin okunabilirliği için koyu katman */}
           </div>
 
           {/* Navigation Buttons */}
@@ -110,6 +113,31 @@ function App() {
                   Hizmetlerimiz
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-2xl h-80 md:h-[450px]">
+              <img src="/images/isletmefoto1.webp" alt="Salonumuz" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black-900">Hakkımızda</h2>
+              <p className="text-lg text-black-700 leading-relaxed mb-6">
+                Güzellik sektöründe yaşanan tüm gelişmeleri yakından takip eden salonumuz,
+                teknolojiyi en doğru şekilde kullanarak müşterileriyle buluşmaktadır.
+                Kaliteden asla ödün vermeyen güzellik salonumuz, son teknoloji cihazlarla,
+                uygun fiyat politikası ve müşteri memnuniyeti odaklı hizmet vermektedir.
+              </p>
+              <Link
+                to="/hakkimizda"
+                className="inline-block bg-gold-500 text-black-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-gold-400 transition shadow-lg"
+              >
+                Daha Fazla Bilgi
+              </Link>
             </div>
           </div>
         </div>

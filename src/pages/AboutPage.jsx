@@ -21,7 +21,7 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
           <div className="rounded-xl overflow-hidden h-80 md:h-[450px] shadow-lg ring-1 ring-black-100">
-            <ImagePlaceholder label="Salon Görseli" />
+            <img src="/images/isletmefoto2.jpg" alt="Salon Görseli" className="w-full h-full object-cover" />
           </div>
           <div>
             <h2 className="text-3xl font-bold text-black-900 mb-6">Biz Kimiz?</h2>

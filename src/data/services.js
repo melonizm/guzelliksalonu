@@ -200,6 +200,7 @@ export const services = [
   {
     id: 'kuafor-bolumu',
     name: 'Kuaför Bölümü',
+    image: '/images/isletmefoto3.jpg',
     description: 'Kuaför hizmetleri',
     fullDescription: 'Profesyonel kuaför bölümümüz, saç kesimi, fön, maşa, topuz, örgü ve saç aksesuarı uygulamaları dahil geniş bir hizmet yelpazesi sunar. Özel günler, düğünler, mezuniyetler ve günlük bakım için deneyimli kuaförlerimiz hizmetinizdedir. Modern teknikler ve trend modeller uygulanır.',
     details: 'Kuaför hizmetleri randevu ile sunulur. Fön ve şekillendirme 30–60 dakika, topuz ve örgü modelleri 45–90 dakika sürebilir. Saç tipinize uygun ürünler kullanılarak hem estetik hem sağlıklı sonuçlar elde edilir. Gelin ve davet saçı modelleri için özel randevu alınabilir.',
