@@ -7,7 +7,11 @@ export const ImageProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/images')
+    const apiUrl = import.meta.env.PROD 
+      ? 'https://guzelliksalonu-ly3l.onrender.com/api/images'
+      : '/api/images';
+
+    fetch(apiUrl)
       .then(res => res.json())
       .then(data => {
         setDbImages(data);
