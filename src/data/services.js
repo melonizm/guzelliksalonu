@@ -1,6 +1,7 @@
 export const services = [
   {
     id: 'lazer-epilasyon',
+    dbKey: 'lazerepilasyon',
     name: 'Lazer Epilasyon',
     image: '/images/lazerepilasyon.jpeg',
     description: 'Kalıcı ve etkili epilasyon çözümü',
@@ -10,6 +11,7 @@ export const services = [
   },
   {
     id: 'rasping',
+    dbKey: 'rasping',
     name: 'Rasping',
     image: '/images/Rasping.jpg',
     description: 'Vücut şekillendirme ve sıkılaştırma',
@@ -19,6 +21,7 @@ export const services = [
   },
   {
     id: 'g5-masaji',
+    dbKey: 'g5masaji',
     name: 'G5 Masajı',
     image: '/images/G5masaji.jpg',
     description: 'Selülit ve bölgesel incelme',
@@ -28,6 +31,7 @@ export const services = [
   },
   {
     id: 'striort-catlak-tedavisi',
+    dbKey: 'striort',
     name: 'Striort Çatlak Tedavisi',
     image: '/images/Striortcatlaktedavisi.webp',
     description: 'Çatlakların görünümünü azaltma',
@@ -37,6 +41,7 @@ export const services = [
   },
   {
     id: 'cilt-bakimi',
+    dbKey: 'ciltbakimi',
     name: 'Cilt Bakımı',
     image: '/images/ciltbakimi.webp',
     description: 'Profesyonel cilt bakım hizmetleri',
@@ -46,6 +51,7 @@ export const services = [
   },
   {
     id: 'hydrfacial',
+    dbKey: 'hydrafacial',
     name: 'Hydrfacial',
     image: '/images/Hydrfacial.jfif',
     description: 'Hidrasyon ve cilt yenileme',
@@ -55,6 +61,7 @@ export const services = [
   },
   {
     id: 'dermapen',
+    dbKey: 'dermapen',
     name: 'Dermapen',
     image: '/images/Dermapen.webp',
     description: 'Cilt yenileme tedavisi',
@@ -64,6 +71,7 @@ export const services = [
   },
   {
     id: 'plazmapen',
+    dbKey: 'plazmapen',
     name: 'Plazmapen',
     image: '/images/Plazmapen.jpg',
     description: 'Cilt sorunlarına çözüm',
@@ -73,6 +81,7 @@ export const services = [
   },
   {
     id: 'sac-vitamini-mezoterapi',
+    dbKey: 'sacvitamini',
     name: 'Saç Vitamini Mezoterapi',
     image: '/images/SacVitaminiMezoterapi.webp',
     description: 'Saç sağlığı ve güçlendirme',
@@ -82,6 +91,7 @@ export const services = [
   },
   {
     id: 'kas-vitamini',
+    dbKey: 'kasvitamini',
     name: 'Kaş Vitamini',
     image: '/images/kasvitamini.jpg',
     description: 'Gür ve sağlıklı kaşlar için',
@@ -91,6 +101,7 @@ export const services = [
   },
   {
     id: 'ipek-kirpik',
+    dbKey: 'ipekkirpik',
     name: 'İpek Kirpik',
     image: '/images/ipekKirpik.jfif',
     description: 'Gösterişli ve doğal kirpikler',
@@ -100,6 +111,7 @@ export const services = [
   },
   {
     id: 'protez-tirnak',
+    dbKey: 'proteztirnak',
     name: 'Protez Tırnak',
     image: '/images/ProtezTirnak.jpg',
     description: 'Güzel ve sağlıklı tırnaklar',
@@ -109,6 +121,7 @@ export const services = [
   },
   {
     id: 'lifting',
+    dbKey: 'ciltlifting',
     name: 'Lifting',
     image: '/images/Ciltlifting.webp',
     description: 'Genç ve diri bir görünüm',
@@ -118,6 +131,7 @@ export const services = [
   },
   {
     id: 'manikur',
+    dbKey: 'manikur',
     name: 'Manikür',
     image: '/images/Manikur.webp',
     description: 'Eller için profesyonel bakım',
@@ -127,6 +141,7 @@ export const services = [
   },
   {
     id: 'pedikur',
+    dbKey: 'pedikur',
     name: 'Pedikür',
     image: '/images/Pedikur.webp',
     description: 'Ayaklar için rahatlatıcı bakım',
@@ -136,6 +151,7 @@ export const services = [
   },
   {
     id: 'dudak-renklendirme',
+    dbKey: 'dudakrenklendirme',
     name: 'Dudak Renklendirme',
     image: '/images/DudakRenklendirme.jfif',
     description: 'Doğal ve kalıcı dudak rengi',
@@ -145,6 +161,7 @@ export const services = [
   },
   {
     id: 'microblading-kil-teknigi',
+    dbKey: 'microblading',
     name: 'Microblading Kıl Tekniği',
     image: '/images/MicrobladingKilTeknigi.jfif',
     description: 'Kalıcı kaş tasarımı',
@@ -154,6 +171,7 @@ export const services = [
   },
   {
     id: 'kalici-eyeliner',
+    dbKey: 'kalicieyeliner',
     name: 'Kalıcı Eyeliner',
     image: '/images/KaliciEyeliner.jfif',
     description: 'Kalıcı göz makyajı',
@@ -163,6 +181,7 @@ export const services = [
   },
   {
     id: 'altinoran-kas-alimi',
+    dbKey: 'altinoran',
     name: 'Altınoran Kaş Alımı',
     image: '/images/AltinoranKasAlimi.jpg',
     description: 'Profesyonel kaş şekillendirme',
@@ -172,6 +191,7 @@ export const services = [
   },
   {
     id: 'gelin-basi',
+    dbKey: 'gelinbasi',
     name: 'Gelin Başı',
     image: '/images/GelinBasi.PNG',
     description: 'Özel günler için makyaj',
@@ -181,6 +201,7 @@ export const services = [
   },
   {
     id: 'profesyonel-makyaj',
+    dbKey: 'promakyaj',
     name: 'Profesyonel Makyaj',
     image: '/images/promakyaj.jpg',
     description: 'Her türlü makyaj hizmeti',
@@ -190,6 +211,7 @@ export const services = [
   },
   {
     id: 'tum-sac-islemleri',
+    dbKey: 'sacislemleri',
     name: 'Tüm Saç İşlemleri',
     image: '/images/sacislemleri.webp',
     description: 'Tüm saç bakım hizmetleri',
@@ -199,6 +221,7 @@ export const services = [
   },
   {
     id: 'kuafor-bolumu',
+    dbKey: 'isletmefoto3',
     name: 'Kuaför Bölümü',
     image: '/images/isletmefoto3.jpg',
     description: 'Kuaför hizmetleri',

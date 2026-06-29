@@ -2,10 +2,15 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { services } from '../data/services';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import ImageWithSkeleton from '../components/ImageWithSkeleton';
+import { useImages } from '../context/ImageContext';
 
 const ServicePage = () => {
   const { id } = useParams();
   const service = services.find(s => s.id === id);
+  const { dbImages } = useImages();
+  
+  const imageUrl = (dbImages && service?.dbKey && dbImages[service.dbKey]) ? dbImages[service.dbKey] : service?.image;
 
   useEffect(() => {
     document.title = service
@@ -39,9 +44,9 @@ const ServicePage = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-xl overflow-hidden h-64 md:h-96 mb-10 shadow-lg ring-1 ring-black-100">
-            {service.image ? (
-              <img
-                src={service.image}
+            {imageUrl ? (
+              <ImageWithSkeleton
+                src={imageUrl}
                 alt={service.name}
                 className="w-full h-full object-cover"
               />

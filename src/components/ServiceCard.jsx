@@ -1,15 +1,20 @@
 import { Link } from 'react-router-dom';
 import ImagePlaceholder from './ImagePlaceholder';
+import ImageWithSkeleton from './ImageWithSkeleton';
+import { useImages } from '../context/ImageContext';
 
 const ServiceCard = ({ service }) => {
+  const { dbImages } = useImages();
+  const imageUrl = (dbImages && service.dbKey && dbImages[service.dbKey]) ? dbImages[service.dbKey] : service.image;
+
   return (
     <div className="relative aspect-[4/3] perspective-1000 group cursor-pointer">
       <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
         {/* Ön yüz – placeholder veya yüklenen görsel */}
         <div className="absolute inset-0 backface-hidden rounded-xl overflow-hidden shadow-md ring-1 ring-black-100">
-          {service.image ? (
-            <img
-              src={service.image}
+          {imageUrl ? (
+            <ImageWithSkeleton
+              src={imageUrl}
               alt={service.name}
               className="w-full h-full object-cover"
               loading="lazy"

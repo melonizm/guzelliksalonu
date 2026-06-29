@@ -7,8 +7,16 @@ import { services } from './data/services';
 import ServicePage from './pages/ServicePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import { useImages } from './context/ImageContext';
+import ImageWithSkeleton from './components/ImageWithSkeleton';
 
 function App() {
+  const { dbImages } = useImages();
+  
+  // Safe defaults if dbImages is not loaded yet
+  const img1 = dbImages?.isletmefoto1 || '/images/isletmefoto1.webp';
+  const img2 = dbImages?.isletmefoto2 || '/images/isletmefoto2.jpg';
+  const img3 = dbImages?.isletmefoto3 || '/images/isletmefoto3.jpg';
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -43,15 +51,15 @@ function App() {
           <div className="absolute inset-0">
             <div
               className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'}`}
-              style={{ backgroundImage: "url('/images/isletmefoto1.webp')" }}
+              style={{ backgroundImage: `url('${img1}')` }}
             />
             <div
               className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'}`}
-              style={{ backgroundImage: "url('/images/isletmefoto2.jpg')" }}
+              style={{ backgroundImage: `url('${img2}')` }}
             />
             <div
               className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${currentSlide === 2 ? 'opacity-100' : 'opacity-0'}`}
-              style={{ backgroundImage: "url('/images/isletmefoto3.jpg')" }}
+              style={{ backgroundImage: `url('${img3}')` }}
             />
             <div className="absolute inset-0 bg-black/60" /> {/* Metinlerin okunabilirliği için koyu katman */}
           </div>
@@ -122,7 +130,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="rounded-xl overflow-hidden shadow-2xl h-80 md:h-[450px]">
-              <img src="/images/isletmefoto1.webp" alt="Salonumuz" className="w-full h-full object-cover" />
+              <ImageWithSkeleton src={img1} alt="Salonumuz" className="w-full h-full object-cover" />
             </div>
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black-900">Hakkımızda</h2>
