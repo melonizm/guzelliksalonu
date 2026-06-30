@@ -7,9 +7,8 @@ export const ImageProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiUrl = import.meta.env.PROD 
-      ? 'https://guzelliksalonu-ly3l.onrender.com/api/images'
-      : '/api/images';
+    // Daima render.com'daki backend'i kullanarak localde ayrıca server.js çalıştırma zorunluluğunu kaldırıyoruz
+    const apiUrl = 'https://guzelliksalonu-ly3l.onrender.com/api/images';
 
     // Tarayıcı önbelleğini (cache) atlamak için URL'nin sonuna anlık timestamp ekliyoruz
     const cacheBuster = `?t=${new Date().getTime()}`;

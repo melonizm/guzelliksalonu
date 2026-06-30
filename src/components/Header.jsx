@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { services } from '../data/services';
+import { useImages } from '../context/ImageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { dbImages } = useImages();
 
   return (
     <header className="bg-white shadow-lg fixed w-full top-0 z-50">
@@ -33,7 +35,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-3xl font-bold text-black-900 hover:text-gold-600 transition">
-            Güzellik Salonu
+            {dbImages?.isletmeAdi || "Güzellik Salonu"}
           </Link>
           
           <div className="hidden md:flex items-center space-x-6">

@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useImages } from '../context/ImageContext';
 
 const Footer = () => {
+  const { dbImages } = useImages();
   return (
     <footer className="bg-gray-900 text-white">
       <div className="bg-black-900 py-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <h3 className="text-2xl font-bold mb-2 text-gold-400">Güzellik Salonu</h3>
+              <h3 className="text-2xl font-bold mb-2 text-gold-400">{dbImages?.isletmeAdi || "Güzellik Salonu"}</h3>
               <p className="text-gold-200">Kendinizi özel hissetmeniz için profesyonel güzellik hizmetleri</p>
             </div>
             <div className="flex justify-center items-center space-x-6">
@@ -74,7 +76,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-400">Örnek Mahallesi, No: 123</span>
+                <span className="text-gray-400">{dbImages?.adres || "Örnek Mahallesi, No: 123"}</span>
               </li>
               <li className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +96,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>&copy; 2024 Güzellik Salonu. Tüm hakları saklıdır.</p>
+            <p>&copy; {new Date().getFullYear()} {dbImages?.isletmeAdi || "Güzellik Salonu"}. Tüm hakları saklıdır.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-gold-400 transition">Gizlilik Politikası</a>
               <a href="#" className="hover:text-gold-400 transition">Kullanım Şartları</a>

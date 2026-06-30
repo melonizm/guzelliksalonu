@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ServiceCard from './components/ServiceCard';
@@ -12,6 +12,23 @@ import ImageWithSkeleton from './components/ImageWithSkeleton';
 
 function App() {
   const { dbImages } = useImages();
+
+  useEffect(() => {
+    if (dbImages) {
+      if (dbImages.isletmeAdi) {
+        document.title = dbImages.isletmeAdi;
+      }
+      if (dbImages.favicon) {
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'icon';
+          document.getElementsByTagName('head')[0].appendChild(link);
+        }
+        link.href = dbImages.favicon;
+      }
+    }
+  }, [dbImages]);
   
   // Safe defaults if dbImages is not loaded yet
   const img1 = dbImages?.isletmefoto1 || '/images/isletmefoto1.webp';
