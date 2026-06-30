@@ -62,8 +62,8 @@ function App() {
   };
   const HomePage = () => (
     <>
-      <section id="home" className="pt-32">
-        <div className="relative h-96 md:h-[500px] bg-black-900 overflow-hidden">
+      <section id="home" className="pt-32 pb-12 px-4 md:px-8 max-w-screen-2xl mx-auto">
+        <div className="relative h-[80vh] md:h-[600px] bg-black-900 overflow-hidden rounded-3xl shadow-2xl">
           {/* Hero arka plan – işletme fotoğrafları */}
           <div className="absolute inset-0">
             <div
@@ -84,17 +84,17 @@ function App() {
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gold-500/80 hover:bg-gold-500 text-white rounded-full flex items-center justify-center transition z-20"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-gold-500/80 hover:bg-gold-500 text-white rounded-full flex items-center justify-center transition z-20"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button 
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gold-500/80 hover:bg-gold-500 text-white rounded-full flex items-center justify-center transition z-20"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-gold-500/80 hover:bg-gold-500 text-white rounded-full flex items-center justify-center transition z-20"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -113,27 +113,27 @@ function App() {
           </div>
 
           {/* Content */}
-          <div className="container mx-auto px-4 py-24 relative z-10 h-full flex items-center">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gold-400 transition-opacity duration-500">
+          <div className="container mx-auto px-10 md:px-4 py-16 md:py-24 relative z-10 h-full flex items-center">
+            <div className="max-w-4xl mx-auto text-center mt-8 md:mt-0">
+              <h1 className="font-heading text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-gold-400 transition-opacity duration-500 px-2">
                 {slides[currentSlide].title}
               </h1>
-              <p className="text-2xl md:text-3xl mb-4 text-gold-200 font-light transition-opacity duration-500">
+              <p className="text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4 text-gold-200 font-light transition-opacity duration-500">
                 {slides[currentSlide].subtitle}
               </p>
-              <p className="text-lg mb-8 text-gray-300 transition-opacity duration-500">
+              <p className="text-sm md:text-lg mb-6 md:mb-8 text-gray-300 transition-opacity duration-500">
                 {slides[currentSlide].description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <Link
                   to="/iletisim"
-                  className="inline-block bg-gold-500 text-black-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-400 transition transform hover:scale-105 shadow-lg"
+                  className="inline-block bg-gold-500 text-black-900 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gold-400 transition transform hover:scale-105 shadow-lg"
                 >
                   Bize Ulaşın
                 </Link>
                 <a
                   href="#services"
-                  className="inline-block border-2 border-gold-400 text-gold-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-400 hover:text-black-900 transition"
+                  className="inline-block border-2 border-gold-400 text-gold-400 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gold-400 hover:text-black-900 transition"
                 >
                   Hizmetlerimiz
                 </a>
@@ -150,7 +150,7 @@ function App() {
               <ImageWithSkeleton src={img1} alt="Salonumuz" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black-900">Hakkımızda</h2>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-black-900">Hakkımızda</h2>
               <p className="text-lg text-black-700 leading-relaxed mb-6">
                 Güzellik sektöründe yaşanan tüm gelişmeleri yakından takip eden salonumuz,
                 teknolojiyi en doğru şekilde kullanarak müşterileriyle buluşmaktadır.
@@ -171,7 +171,7 @@ function App() {
       <section id="services" className="py-20 bg-black-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black-900">Hizmetlerimiz</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-black-900">Hizmetlerimiz</h2>
             <p className="text-lg text-black-600 max-w-2xl mx-auto">
               Profesyonel ekibimizle size en iyi güzellik hizmetlerini sunuyoruz
             </p>

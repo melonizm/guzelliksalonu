@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <h3 className="text-2xl font-bold mb-2 text-gold-400">{dbImages?.isletmeAdi || "Güzellik Salonu"}</h3>
+              <h3 className="font-heading text-2xl font-bold mb-2 text-gold-400">{dbImages?.isletmeAdi || "Güzellik Salonu"}</h3>
               <p className="text-gold-200">Kendinizi özel hissetmeniz için profesyonel güzellik hizmetleri</p>
             </div>
             <div className="flex justify-center items-center space-x-6">
@@ -41,7 +41,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h4 className="text-lg font-bold mb-4 text-gold-400">Hakkımızda</h4>
+            <h4 className="font-heading text-lg font-bold mb-4 text-gold-400">Hakkımızda</h4>
             <p className="text-gray-400 text-sm leading-relaxed">
               Güzellik sektöründe yaşanan tüm gelişmeleri yakından takip eden salonumuz, 
               teknolojiyi en doğru şekilde kullanarak müşterileriyle buluşmaktadır.
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-4 text-gold-400">Hızlı Linkler</h4>
+            <h4 className="font-heading text-lg font-bold mb-4 text-gold-400">Hızlı Linkler</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className="text-gray-400 hover:text-gold-400 transition">Ana Sayfa</Link></li>
               <li><Link to="/hakkimizda" className="text-gray-400 hover:text-gold-400 transition">Hakkımızda</Link></li>
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-4 text-gold-400">Hizmetler</h4>
+            <h4 className="font-heading text-lg font-bold mb-4 text-gold-400">Hizmetlerimiz</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/hizmet/lazer-epilasyon" className="text-gray-400 hover:text-gold-400 transition">Lazer Epilasyon</Link></li>
               <li><Link to="/hizmet/cilt-bakimi" className="text-gray-400 hover:text-gold-400 transition">Cilt Bakımı</Link></li>
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-4 text-gold-400">İletişim</h4>
+            <h4 className="font-heading text-lg font-bold mb-4 text-gold-400">İletişim</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

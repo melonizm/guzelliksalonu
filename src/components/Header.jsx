@@ -34,7 +34,7 @@ const Header = () => {
       
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-3xl font-bold text-black-900 hover:text-gold-600 transition">
+          <Link to="/" className="font-heading text-3xl font-bold text-black-900 hover:text-gold-600 transition">
             {dbImages?.isletmeAdi || "Güzellik Salonu"}
           </Link>
           

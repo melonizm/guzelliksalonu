@@ -28,7 +28,7 @@ const ServiceCard = ({ service }) => {
         <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-xl ring-1 ring-gold-500/30">
           <div className="h-full bg-gradient-to-br from-black-900 via-black-800 to-black-900 flex flex-col items-center justify-center px-6 py-8 text-center">
             <div className="w-10 h-0.5 bg-gold-500 mb-4" />
-            <h3 className="text-xl md:text-2xl font-bold text-gold-400 mb-3 leading-tight">
+            <h3 className="font-heading text-xl md:text-2xl font-bold text-gold-400 mb-3 leading-tight">
               {service.name}
             </h3>
             <p className="text-sm text-gray-300 leading-relaxed mb-8 line-clamp-3 max-w-[220px]">
