@@ -11,7 +11,10 @@ export const ImageProvider = ({ children }) => {
       ? 'https://guzelliksalonu-ly3l.onrender.com/api/images'
       : '/api/images';
 
-    fetch(apiUrl)
+    // Tarayıcı önbelleğini (cache) atlamak için URL'nin sonuna anlık timestamp ekliyoruz
+    const cacheBuster = `?t=${new Date().getTime()}`;
+    
+    fetch(apiUrl + cacheBuster)
       .then(res => res.json())
       .then(data => {
         setDbImages(data);
