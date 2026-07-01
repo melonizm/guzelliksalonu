@@ -8,7 +8,18 @@ import ServicePage from './pages/ServicePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { useImages } from './context/ImageContext';
+import { useLocation } from 'react-router-dom';
 import ImageWithSkeleton from './components/ImageWithSkeleton';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const { dbImages } = useImages();
@@ -115,14 +126,17 @@ function App() {
           {/* Content */}
           <div className="container mx-auto px-10 md:px-4 py-16 md:py-24 relative z-10 h-full flex items-center">
             <div className="max-w-4xl mx-auto text-center mt-8 md:mt-0">
-              <h1 className="font-heading text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-gold-400 transition-opacity duration-500 px-2">
+              <h1 
+                className="font-heading text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-gold-400 transition-opacity duration-500 px-2"
+                style={{ textShadow: '-1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000' }}
+              >
                 {slides[currentSlide].title}
               </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4 text-gold-200 font-light transition-opacity duration-500">
+              <p 
+                className="text-xl md:text-2xl lg:text-3xl mb-8 md:mb-10 text-gold-200 font-bold transition-opacity duration-500"
+                style={{ textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}
+              >
                 {slides[currentSlide].subtitle}
-              </p>
-              <p className="text-sm md:text-lg mb-6 md:mb-8 text-gray-300 transition-opacity duration-500">
-                {slides[currentSlide].description}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <Link
@@ -133,7 +147,7 @@ function App() {
                 </Link>
                 <a
                   href="#services"
-                  className="inline-block border-2 border-gold-400 text-gold-400 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gold-400 hover:text-black-900 transition"
+                  className="inline-block bg-gold-500 text-black-900 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gold-400 transition transform hover:scale-105 shadow-lg"
                 >
                   Hizmetlerimiz
                 </a>
@@ -188,6 +202,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
