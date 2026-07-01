@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { services } from '../data/services';
+import { useImages } from '../context/ImageContext';
 
 const ContactPage = () => {
+  const { dbImages } = useImages();
   useEffect(() => {
     document.title = 'İletişim | Güzellik Salonu';
   }, []);
@@ -32,7 +34,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Adres</h3>
-                    <p className="text-gold-100">Örnek Mahallesi, No: 123</p>
+                    <p className="text-gold-100">{dbImages?.adres || "Örnek Mahallesi, No: 123"}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -43,7 +45,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Telefon</h3>
-                    <p className="text-gold-100">(0212) 123 45 67</p>
+                    <p className="text-gold-100">{dbImages?.telefon || "(0212) 123 45 67"}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -54,7 +56,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">E-posta</h3>
-                    <p className="text-gold-100">info@guzelliksalonu.com</p>
+                    <p className="text-gold-100">{dbImages?.eposta || "info@guzelliksalonu.com"}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
