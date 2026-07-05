@@ -26,6 +26,7 @@ export const ImageProvider = ({ children }) => {
         return res.json();
       })
       .then(data => {
+        console.log('API Response:', data);
         setDbImages(data);
         setLoading(false);
       })
