@@ -2,9 +2,11 @@ import { Link } from 'react-router-dom';
 import ImagePlaceholder from './ImagePlaceholder';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import { useImages } from '../context/ImageContext';
+import { useSlugLink } from '../hooks/useSlugLink';
 
 const ServiceCard = ({ service }) => {
   const { dbImages } = useImages();
+  const link = useSlugLink();
   const imageUrl = (dbImages && service.dbKey && dbImages[service.dbKey]) ? dbImages[service.dbKey] : service.image;
 
   return (
@@ -35,7 +37,7 @@ const ServiceCard = ({ service }) => {
               {service.description}
             </p>
             <Link
-              to={`/hizmet/${service.id}`}
+              to={link(`/hizmet/${service.id}`)}
               className="inline-flex items-center gap-2 bg-gold-500 text-black-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gold-400 transition-all shadow-md hover:shadow-lg hover:scale-105"
             >
               Daha Fazla
