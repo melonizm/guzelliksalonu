@@ -12,7 +12,8 @@ function RootRedirect() {
   const [targetSlug, setTargetSlug] = useState(null);
 
   useEffect(() => {
-    fetch('/api/images')
+    const baseUrl = 'https://guzelliksalonu-ly3l.onrender.com';
+    fetch(`${baseUrl}/api/images`)
       .then(res => res.json())
       .then(data => {
         if (data && data.slug) {
