@@ -12,8 +12,7 @@ function RootRedirect() {
   const [targetSlug, setTargetSlug] = useState(null);
 
   useEffect(() => {
-    const baseUrl = import.meta.env.DEV ? 'http://localhost:3002' : 'https://guzelliksalonu-ly3l.onrender.com';
-    fetch(`${baseUrl}/api/images`)
+    fetch('/api/images')
       .then(res => res.json())
       .then(data => {
         if (data && data.slug) {

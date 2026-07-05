@@ -12,13 +12,10 @@ export const ImageProvider = ({ children }) => {
     setLoading(true);
     setDbImages(null);
 
-    // Local API server for testing the new changes
-    const baseUrl = import.meta.env.DEV ? 'http://localhost:3002' : 'https://guzelliksalonu-ly3l.onrender.com';
-
     // Slug varsa o işletmeyi çek, yoksa ilk işletmeyi çek
     const apiUrl = slug
-      ? `${baseUrl}/api/images/${slug}`
-      : `${baseUrl}/api/images`;
+      ? `/api/images/${slug}`
+      : `/api/images`;
 
     // Tarayıcı önbelleğini (cache) atlamak için URL'nin sonuna anlık timestamp ekliyoruz
     const cacheBuster = `?t=${new Date().getTime()}`;
