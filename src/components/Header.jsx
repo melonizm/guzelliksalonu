@@ -36,7 +36,14 @@ const Header = () => {
       
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link to={link("/")} className="font-heading text-3xl font-bold text-black-900 hover:text-gold-600 transition">
+          <Link to={link("/")} className="flex items-center gap-3 font-heading text-3xl font-bold text-black-900 hover:text-gold-600 transition">
+            {dbImages?.favicon && (
+              <img
+                src={dbImages.favicon}
+                alt="Logo"
+                className="w-10 h-10 object-contain rounded-lg"
+              />
+            )}
             {dbImages?.isletmeAdi || "Güzellik Salonu"}
           </Link>
           
@@ -99,7 +106,16 @@ const Header = () => {
 
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-3 pb-4">
-            <Link to={link("/")} className="block text-black-800 hover:text-gold-600 font-medium py-2" onClick={() => setIsMenuOpen(false)}>ANASAYFA</Link>
+            <Link to={link("/")} className="flex items-center gap-2 text-black-800 hover:text-gold-600 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+              {dbImages?.favicon && (
+                <img
+                  src={dbImages.favicon}
+                  alt="Logo"
+                  className="w-6 h-6 object-contain rounded-lg"
+                />
+              )}
+              ANASAYFA
+            </Link>
             <Link to={link("/hakkimizda")} className="block text-black-800 hover:text-gold-600 font-medium py-2" onClick={() => setIsMenuOpen(false)}>HAKKIMIZDA</Link>
             <Link to={link("/#services")} className="block text-black-800 hover:text-gold-600 font-medium py-2" onClick={() => setIsMenuOpen(false)}>HİZMETLER</Link>
             <Link to={link("/iletisim")} className="block text-black-800 hover:text-gold-600 font-medium py-2" onClick={() => setIsMenuOpen(false)}>İLETİŞİM</Link>
