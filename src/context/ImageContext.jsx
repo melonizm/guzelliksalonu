@@ -8,28 +8,14 @@ export const ImageProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const { slug } = useParams();
 
-  // Keep-alive: Her 14 dakikada bir backend'e ping at (Render uyku modu 15 dakika)
-  useEffect(() => {
-    const pingBackend = () => {
-      fetch('https://guzelliksalonu-ly3l.onrender.com/api/images')
-        .catch(err => console.log('Keep-alive ping failed:', err));
-    };
-
-    // İlk ping
-    pingBackend();
-
-    // Her 14 dakikada bir ping
-    const interval = setInterval(pingBackend, 14 * 60 * 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  // No keep-alive needed for Vercel Serverless Functions
 
   useEffect(() => {
     setLoading(true);
     setDbImages(null);
 
-    // Render backend URL
-    const baseUrl = 'https://guzelliksalonu-ly3l.onrender.com';
+    // Backend URL (Vercel Serverless Functions)
+    const baseUrl = '';
 
     // Slug varsa o işletmeyi çek, yoksa ilk işletmeyi çek
     const apiUrl = slug
